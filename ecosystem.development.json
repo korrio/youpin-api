@@ -18,9 +18,9 @@
   "deploy" : {
     "development" : {
       "user" : "root",
-      "host" : ["128.199.87.142"],
+      "host" : ["139.59.250.194"],
       "ref"  : "origin/master",
-      "repo" : "git@github.com:youpin-city/youpin-api.git",
+      "repo" : "git@github.com:korrio/youpin-api.git",
       "path" : "/opt/youpin-api.development",
       "post-deploy" : "npm install --production && pm2 startOrRestart ecosystem.development.json --env development",
       "pre-deploy-local" : "echo '[development] deploy completed.'",

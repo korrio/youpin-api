@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "title": "YouPin.city REST API",
   "description": "REST API for YouPin.city",
-  "url": "https://api.youpin.city",
+  "url": "http://api.foodfromthailand.com",
   "header": {
     "title": "Introduction",
     "filename": "header.md"

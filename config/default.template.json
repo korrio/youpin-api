@@ -6,11 +6,11 @@
   "public": "../public/",
   "auth": {
     "token": {
-      "secret": "SECRET_AUTH_TOKEN"
+      "secret": "SECRET_AUTH_TOKEN_555"
     },
     "facebook": {
-      "clientID": "your facebook client id",
-      "clientSecret": "your facebook client secret",
+      "clientID": "812207955571269",
+      "clientSecret": "7b024358ac126926363f83e05dc31c83",
       "permissions": {
         "scope": ["public_profile","email"]
       }
