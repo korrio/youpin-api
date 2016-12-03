@@ -4,6 +4,8 @@
   "mongodb": "mongodb://mongodb:27017/youpin",
   "public": "../public/",
   "auth": {
+    "successRedirect": "your url for success login",
+    "failureRedirect": "your url for fail login",
     "token": {
       "secret": "SECRET_AUTH_TOKEN"
     },
@@ -11,8 +13,10 @@
       "clientID": "812207955571269",
       "clientSecret": "7b024358ac126926363f83e05dc31c83",
       "permissions": {
+        "authType": "rerequest",
         "scope": ["public_profile","email"]
-      }
+      },
+      "profileFields": ["id", "first_name", "last_name", "email"]
     },
     "github": {
       "clientID": "your github client id",
@@ -34,5 +38,9 @@
     "bucket": "your GCS bucket name",
     "projectId": "your GGS project ID",
     "keyFile": "your credentials key file path"
+  },
+  "logger": {
+    "path": "logs",
+    "filename": "api.log"
   }
 }

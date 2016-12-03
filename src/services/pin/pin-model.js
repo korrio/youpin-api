@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const UNVERIFIED = require('../../constants/pin-states').UNVERIFIED;
 
 const Schema = mongoose.Schema;
 
@@ -32,9 +33,10 @@ const PinSchema = new Schema({
   level: String,
   mentions: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   neighborhood: [String],
+  organization: { type: Schema.Types.ObjectId, ref: 'Organization', required: true },
   owner: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   photos: [String],
-  status: String,
+  status: { type: String, required: true, default: UNVERIFIED },
   location: {
     type: { type: String, enum: 'Point', default: 'Point' },
     // default to Thailand Democracy Monument
@@ -45,6 +47,10 @@ const PinSchema = new Schema({
   comments: [CommentSchema],
   voters: [VoteSchema],
   videos: [Schema.Types.ObjectId],
+  is_archived: { type: Boolean, default: false },
+  assigned_department: { type: Schema.Types.ObjectId, ref: 'Departmeent' },
+  assigned_user: { type: Schema.Types.ObjectId, ref: 'User' },
+  processed_by: { type: Schema.Types.ObjectId, ref: 'User' },
 });
 
 // Index geosearch field
